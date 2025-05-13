@@ -2,6 +2,7 @@
 
 // import mongoose from "mongoose";
 // import {DB_NAME} from "./constants";
+import app from './app.js';
 
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
@@ -17,9 +18,11 @@ connectDB()
         ${process.env.PORT}`);
     })
 })
-.catch((error)=>{
+.catch((err)=>{
     console.log("MONGO db connection failed !!!",err);
 })
+
+export default app;
 
 
 
